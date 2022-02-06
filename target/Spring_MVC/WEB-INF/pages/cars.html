@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<h1>Table Cars</h1>
+<table border="1">
+    <tr>
+        <th>model</th>
+        <th>color</th>
+        <th>series</th>
+    </tr>
+    <tr>
+
+        <!--/*@thymesVar id="count" type=""*/-->
+    <tr th:each="car : ${count}">
+        <td th:utext="${car.getModel()}"></td>
+        <td th:utext="${car.getColor()}"></td>
+        <td th:utext="${car.getseries()}"></td>
+    </tr>
+    </tr>
+</table>
+</body>
+</html>
